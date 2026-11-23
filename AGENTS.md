@@ -114,4 +114,9 @@ pnpm test        # Vitest (engine, adapters, themes, renderer math)
 pnpm build       # Vite production build of apps/web
 pnpm verify      # all of the above, in order
 pnpm dev         # http://localhost:5173 — press ` (backtick) for the Inspector
+pnpm e2e         # with `pnpm dev` running: Puppeteer smoke (25 checks) + layout checks
+                 # env: BASE_URL, CHROME_PATH, E2E_GPU=0 (software GL; skips FPS assertion)
 ```
+
+Any change to UI, layout, renderer or state flow must pass `pnpm e2e` before you report it done.
+Headless software rendering (SwiftShader) runs at about 5 fps, so only quote FPS numbers from a GPU run.
