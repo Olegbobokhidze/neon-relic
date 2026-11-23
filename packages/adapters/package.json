@@ -1,0 +1,19 @@
+{
+  "name": "@slot/adapters",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OutcomeProvider implementations: MockProvider (latency/errors/forced scenarios) and HttpProvider.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@slot/engine": "workspace:*"
+  },
+  "devDependencies": {
+    "@slot/themes": "workspace:*"
+  }
+}

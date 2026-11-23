@@ -1,0 +1,9 @@
+{
+  "name": "@slot/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pure, deterministic slot engine: config, RNG, evaluation, spin state machine, controller.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" }
+}
