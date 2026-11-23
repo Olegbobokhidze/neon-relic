@@ -1,0 +1,12 @@
+{
+  "name": "@slot/renderer-pixi",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "PixiJS v8 reel renderer implementing the engine's ReelsPort.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": { "@slot/engine": "workspace:*" },
+  "peerDependencies": { "pixi.js": "^8.6.0" },
+  "devDependencies": { "pixi.js": "^8.6.6" }
+}
