@@ -72,4 +72,9 @@ export default tseslint.config(
     files: ['scripts/**/*.mjs', '*.js'],
     languageOptions: { globals: globals.node },
   },
+  {
+    // Puppeteer scripts: Node at top level, browser globals inside page.evaluate callbacks.
+    files: ['e2e/**/*.mjs'],
+    languageOptions: { globals: { ...globals.node, ...globals.browser } },
+  },
 );
