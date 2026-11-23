@@ -1,0 +1,56 @@
+/*
+ * Design tokens. Theme colours are overwritten at runtime from GameConfig.theme (App.tsx).
+ * Type scale uses even, integer-pixel line heights only (AGENTS.md §3).
+ */
+:root {
+  /* theme (defaults = Neon Relic) */
+  --c-bg: #07060f;
+  --c-bg-accent: #1d0b33;
+  --c-reel: #0e0b1f;
+  --c-frame: #2de2e6;
+  --c-glow: #ff3cac;
+  --c-text: #f4f1ff;
+  --c-muted: #a39cd0;
+  --c-primary: #ff3cac;
+  --c-on-primary: #12041c;
+  --c-win: #ffd23f;
+  --c-danger: #ff5470;
+
+  /* derived surfaces */
+  --c-surface: color-mix(in srgb, var(--c-bg) 96%, white 4%);
+  --c-surface-2: color-mix(in srgb, var(--c-bg) 92%, white 8%);
+  --c-border: color-mix(in srgb, var(--c-frame) 22%, transparent);
+  --c-border-strong: color-mix(in srgb, var(--c-frame) 45%, transparent);
+
+  /* type */
+  --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Orbitron', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, monospace;
+
+  --fs-11: 11px; --lh-11: 16px;
+  --fs-12: 12px; --lh-12: 16px;
+  --fs-14: 14px; --lh-14: 20px;
+  --fs-16: 16px; --lh-16: 24px;
+  --fs-20: 20px; --lh-20: 28px;
+  --fs-24: 24px; --lh-24: 32px;
+  --fs-32: 32px; --lh-32: 40px;
+  --fs-48: 48px; --lh-48: 56px;
+
+  /* space (4px grid) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  --shadow-glow: 0 0 0 1px var(--c-border), 0 8px 32px -8px color-mix(in srgb, var(--c-glow) 35%, transparent);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --hud-spin: 88px;
+  --tap: 44px;
+}

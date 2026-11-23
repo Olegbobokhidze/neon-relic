@@ -148,6 +148,11 @@ export class SlotController {
     this.dispatch({ type: SlotEventType.RECOVER });
   }
 
+  /** Pull the authoritative balance from the provider (applied only while IDLE / in error). */
+  syncBalance(): void {
+    this.run({ type: EffectType.SYNC_BALANCE });
+  }
+
   /** Swap the title. Only allowed while IDLE; returns whether it was applied. */
   loadConfig(config: GameConfig): boolean {
     if (this.ctx.state !== SpinState.IDLE) return false;
