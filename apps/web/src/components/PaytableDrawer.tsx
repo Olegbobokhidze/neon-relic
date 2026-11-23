@@ -75,6 +75,10 @@ export function PaytableDrawer({ open, onClose }: Props) {
           </div>
         </>
       )}
+
+      <p className="credit">
+        {config.title} · created by <strong>Oleg Bobokhidze</strong>
+      </p>
     </Drawer>
   );
 }

@@ -1,5 +1,7 @@
 # Neon Relic Slot
 
+**Created by Oleg Bobokhidze.**
+
 A modular, deterministic **slot game frontend**: a framework-free engine, a PixiJS v8 reel renderer,
 a synthesized Web Audio layer, swappable backend adapters and a React HUD with a live **Provider Inspector**.
 One engine runs different titles (5×3 paylines, 5×4 ways) by swapping a config object.
@@ -72,3 +74,7 @@ const provider = new HttpProvider({ baseUrl: 'https://rgs.example.com/api/v1/gam
 ```
 
 The engine treats server outcomes as authoritative and cross-checks them locally (a mismatch becomes a `VALIDATION` error).
+
+## Author
+
+Designed and built by **Oleg Bobokhidze**. © 2026 Oleg Bobokhidze. All rights reserved.

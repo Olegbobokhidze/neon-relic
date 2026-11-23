@@ -754,6 +754,18 @@ kbd {
   stroke-width: 0.5;
 }
 
+/* author credit (paytable) */
+.credit {
+  margin: var(--s-8) 0 var(--s-2);
+  text-align: center;
+  font-size: var(--fs-12);
+  line-height: var(--lh-12);
+  color: var(--c-muted);
+}
+.credit strong {
+  color: var(--c-text);
+}
+
 /* ---------------------------------------------------------------- inspector */
 .inspector .drawer__body {
   padding-top: var(--s-2);
