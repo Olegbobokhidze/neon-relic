@@ -21,7 +21,7 @@ describe('reel motion', () => {
   });
 
   it('always lands exactly on the planned integer target, independent of frame rate', () => {
-    for (const dt of [4, 8.33, 16.67, 33.3, 50]) {
+    for (const dt of [4, 8.33, 16.67, 33.3, 50, 100]) {
       const m = createMotion(3.7, NORMAL_MOTION);
       startMotion(m, NORMAL_MOTION);
       for (let t = 0; t < 600; t += dt) stepMotion(m, dt);

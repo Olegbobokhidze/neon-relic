@@ -103,6 +103,8 @@ export class ReelStage implements ReelsPort {
     this.gridLayer.mask = this.gridMask;
     stage.addChild(this.background, this.gridLayer, this.gridMask, this.fxLayer);
     canvas.addEventListener('webglcontextlost', (e) => {
+      // destroy() deliberately loses the context (e.g. React StrictMode remount): not an error.
+      if (this.destroyed) return;
       e.preventDefault();
       this.opts.events?.onContextLost?.();
     });
@@ -241,7 +243,8 @@ export class ReelStage implements ReelsPort {
   private update(ticker: Ticker): void {
     // Motion uses the capped delta; stats use the real elapsed time.
     this.stats.push(ticker.elapsedMS);
-    const dt = Math.min(ticker.deltaMS, 50);
+    // Cap at 100ms (10fps floor): slow devices keep real-time pacing, tab-return spikes stay bounded.
+    const dt = Math.min(ticker.deltaMS, 100);
 
     for (let i = 0; i < this.reels.length; i++) {
       const reel = this.reels[i];
