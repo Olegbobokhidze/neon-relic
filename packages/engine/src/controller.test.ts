@@ -147,6 +147,21 @@ describe('SlotController', () => {
     expect(calls).toHaveLength(2);
   });
 
+  it('primary button stops autoplay (even in the IDLE gap) instead of spinning', async () => {
+    const { controller, clock, calls, answer } = setup();
+    controller.startAuto(5, false);
+    answer(0);
+    await flush();
+    clock.advance(1000);
+    await flush();
+    expect(controller.getSnapshot().ctx.state).toBe(SpinState.IDLE);
+    expect(controller.getSnapshot().ctx.autoSpin).not.toBeNull();
+    controller.spinOrStop(); // pressed during the auto-spin delay
+    expect(controller.getSnapshot().ctx.autoSpin).toBeNull();
+    clock.advance(5000);
+    expect(calls).toHaveLength(1); // no manual spin, no further auto spin
+  });
+
   it('loadConfig is refused mid-round', () => {
     const { controller } = setup();
     controller.spin();

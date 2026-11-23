@@ -118,11 +118,13 @@ export class SlotController {
 
   // ------------------------------------------------------------ intents
 
-  /** Primary button: spin when idle, otherwise slam-stop / skip. */
+  /**
+   * Primary button. While autoplay is active it always stops autoplay (matching its label,
+   * including the IDLE gap between auto rounds); otherwise spin when idle, slam-stop / skip when busy.
+   */
   spinOrStop(): void {
-    const s = this.ctx.state;
-    if (s === SpinState.IDLE) this.dispatch({ type: SlotEventType.SPIN_PRESSED });
-    else if (this.ctx.autoSpin && s !== SpinState.WIN_PRESENTATION) this.dispatch({ type: SlotEventType.STOP_AUTO });
+    if (this.ctx.autoSpin) this.dispatch({ type: SlotEventType.STOP_AUTO });
+    else if (this.ctx.state === SpinState.IDLE) this.dispatch({ type: SlotEventType.SPIN_PRESSED });
     else this.dispatch({ type: SlotEventType.SLAM_STOP });
   }
 
