@@ -1,0 +1,10 @@
+{
+  "name": "@slot/audio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Web Audio sound manager with synthesized SFX, persisted mute/volume and a safe fallback.",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json" },
+  "dependencies": { "@slot/engine": "workspace:*" }
+}
