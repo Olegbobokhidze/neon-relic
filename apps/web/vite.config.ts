@@ -16,9 +16,6 @@ export default defineConfig({
   // LAN exposure is opt-in for device testing: pnpm dev -- --host
   server: { port: 5173 },
   build: {
-    // Emit to the repo-root dist/ so static hosts (Vercel, Netlify) find it with default settings.
-    outDir: '../../dist',
-    emptyOutDir: true,
     target: 'es2022',
     sourcemap: true,
     // Pixi is a deliberate ~170KB gz dependency (ADR-0002), isolated in its own long-cache chunk.

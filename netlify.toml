@@ -1,7 +1,7 @@
 # Netlify: connect the repo in the Netlify UI; it reads this file.
 [build]
   command = "pnpm install --frozen-lockfile && pnpm build"
-  publish = "dist"
+  publish = "apps/web/dist"
 
 [build.environment]
   NODE_VERSION = "22"
