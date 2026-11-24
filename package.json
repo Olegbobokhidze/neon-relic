@@ -18,6 +18,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "verify": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+    "share:assets": "node scripts/share-assets.mjs",
     "log:decision": "node scripts/log-decision.mjs",
     "report:new": "node scripts/new-report.mjs",
     "e2e": "node e2e/smoke.mjs && node e2e/layout.mjs"

@@ -1,0 +1,56 @@
+{
+  "publicDir": "apps/web/public",
+  "devUrl": "http://localhost:5173/",
+  "shot": {
+    "viewport": [
+      1440,
+      810
+    ],
+    "dpr": 2,
+    "query": "./",
+    "waitMs": 2500
+  },
+  "icon": {
+    "bg": "#07060f",
+    "applePad": 0
+  },
+  "card": {
+    "bg": "#07060f",
+    "ink": "#F4F1FF",
+    "muted": "#A59CC8",
+    "accent": "#FF3CAC",
+    "backdrop": "radial-gradient(640px 420px at 0% 0%, rgba(255,60,172,0.16), transparent 70%), radial-gradient(760px 520px at 100% 100%, rgba(45,226,230,0.12), transparent 70%)",
+    "fontsHref": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap",
+    "bodyFont": "'Inter', system-ui, sans-serif",
+    "displayFont": "'Orbitron', 'Inter', sans-serif",
+    "titleWeight": 800,
+    "titleTracking": "0.04em",
+    "titleShadow": "0 0 28px rgba(255,60,172,0.55)",
+    "eyebrow": "5×3 video slot · 20 lines",
+    "title": "NEON RELIC",
+    "titleSize": 72,
+    "titleLineHeight": 80,
+    "tagline": "A deterministic slot engine with PixiJS reels and a React HUD.",
+    "features": [
+      "Wilds, scatters and free spins",
+      "Two skins: 20 lines and 1024 ways",
+      "Seeded, replayable outcomes and a dev inspector"
+    ],
+    "panelWidth": 620,
+    "crop": {
+      "x": 224,
+      "y": 67,
+      "w": 989,
+      "h": 609
+    },
+    "fit": "width",
+    "fadeX": 150,
+    "fadeY": 0,
+    "author": "Oleg Bobokhidze",
+    "copyWidth": 470,
+    "clip": [
+      122,
+      122
+    ]
+  }
+}
